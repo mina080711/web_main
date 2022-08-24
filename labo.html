@@ -1,62 +1,119 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
-    <link href='css/style.css' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script> 
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
-  </head>
-  <body class="click_labo new01_labo">
-    <header class="main_h sticky">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />    
+    <link rel="stylesheet" href="./css/menu.css">    
+    <link rel="stylesheet" href="./css/style.css">
 
-        <div class="row">
-            <a class="logo" href="#">NishiumiDaina</a>
-
-            <div class="mobile-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./work.html">Work</a></li>
-                    <li><a href="./labo.html">Labo</Label></a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-        </div> <!-- / row -->
-
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ityped@1.0.3"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+</head>
+<body class="main">
+    <header>
+        <h1>
+            <a>NISHIUMI DAINA</a>
+         </h1>
+         <nav class="pc-nav">
+            <ul>
+               <li><a href="./about.html">ABOUT</a></li>
+               <li><a href="./work.html">WORK</a></li>
+               <li><a href="./labo.html">LABO</a></li>
+               <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+         </nav>
+         <nav class="sp-nav">
+            <ul>
+               <li><a href="./about.html">ABOUT</a></li>
+               <li><a href="./work.html">WORK</a></li>
+               <li><a href="./labo.html">LABO</a></li>
+               <li><a href="./contact.html">CONTACT</a></li>
+               <li class="close"><span>CLOSE</span></li>
+            </ul>
+         </nav>
+         <div id="hamburger">
+            <span></span>
+         </div>
     </header>
+    <!-- メイン要素 -->
     <div class="all">
-        <div class="hero">
-
-            <h1><span>Bunkyo University</span><br>Portfolio site</h1>
-
-        </div>
-        <div class="row content sample-text1">
-            <div>
-                <h1 class="sec03">Labo.</h1>
-                <div>
-                    <h3>所属</h3>
-                    <p>文教大学　川合研究室</p>
-                    <h3>研究内容</h3>
-                    <p>ゲーム開発、システム開発、情報デザイン、3DCG等を広く研究しています。</p>
-                    <h3>成果物等</h3>
-                    <p>リアルタイムメタバースの開発、物体検出を用いた駐輪場管理システム、人流可視化システム</p>                       
-                </div>
+        <div class="container">
+            <div class="swiper infinite-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./imgs/slide01.png" alt="画像1" /></div>
+                <div class="swiper-slide"><img src="./imgs/slide02.png" alt="画像2" /></div>
+              </div>
             </div>
+          </div>
+
+        <div class="hero">
+            <h1><span>Bunkyo University</span><br>Laboratory</h1>
+        </div>
+        <div class="main_all">
+            <div class="main01">
+                <img class="img_main" src="./imgs/img01.png">  
+            </div>              
+            <div class="lines01">
+                <a><img class="img_botton01" src="./imgs/botton01.png"></a>                     
+                <img class="img_line01" src="./imgs/line01.png">
+                <a><img class="img_botton02" src="./imgs/botton02.png"> </a>
+            </div>
+        </div>
+
+        <div class="main_all">
+            <div class="lines02">
+                <a><img class="img_botton03" src="./imgs/botton03.png"></a>                     
+                <img class="img_line02" src="./imgs/line02.png">
+                <a><img class="img_botton04" src="./imgs/botton04.png"></a>  
+            </div>            
+            <div class="main02">
+                <img class="img_main" src="./imgs/img02.png">  
+            </div>              
 
         </div>
     </div>
-  </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
-<script src="js/main.js"></script>  
+    <div class="start">
+    </div>        
+
+</body>
+<script>
+    $(function() {
+       const hum = $('#hamburger, .close')
+       const nav = $('.sp-nav')
+       hum.on('click', function(){
+          nav.toggleClass('toggle');
+       });
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const infiniteSlider = new Swiper(".infinite-slider", {
+            loop: true,
+            loopedSlides: 2,
+            slidesPerView: "auto",
+            speed: 40000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+            },
+        });
+    });
+
+    $('.main').on('click', function () {
+        $(".main").toggleClass("main2");
+    });
+    //スタート
+    $(function() {
+	setTimeout(function(){
+		$('.start p').fadeIn(1600);
+	},500); //0.5秒後にロゴをフェードイン!
+	setTimeout(function(){
+		$('.start').fadeOut(500);
+	},2000); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
+});
+  
+
+    </script>
 </html>
