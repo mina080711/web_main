@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />    
-    <link rel="stylesheet" href="./css/menu.css">    
-    <link rel="stylesheet" href="./css/style.css">
 
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ityped@1.0.3"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />    
+    <link rel="stylesheet" href="./css/menu.css">    
+    <link rel="stylesheet" href="./css/style.css">    
 </head>
-<body class="main">
+<body class="main_labo">
     <header>
         <h1>
             <a>NISHIUMI DAINA</a>
@@ -52,32 +52,15 @@
         <div class="hero">
             <h1><span>Bunkyo University</span><br>Laboratory</h1>
         </div>
-        <div class="main_all">
-            <div class="main01">
-                <img class="img_main" src="./imgs/img01.png">  
-            </div>              
-            <div class="lines01">
-                <a><img class="img_botton01" src="./imgs/botton01.png"></a>                     
-                <img class="img_line01" src="./imgs/line01.png">
-                <a><img class="img_botton02" src="./imgs/botton02.png"> </a>
-            </div>
-        </div>
-
-        <div class="main_all">
-            <div class="lines02">
-                <a><img class="img_botton03" src="./imgs/botton03.png"></a>                     
-                <img class="img_line02" src="./imgs/line02.png">
-                <a><img class="img_botton04" src="./imgs/botton04.png"></a>  
-            </div>            
-            <div class="main02">
-                <img class="img_main" src="./imgs/img02.png">  
-            </div>              
-
+        <div class="page">
+            <h3>所属</h3>
+            <p>文教大学　川合研究室</p>
+            <h3>研究内容</h3>
+            <p>ゲーム開発、システム開発、情報デザイン、3DCG等を広く研究しています。</p>
+            <h3>成果物等</h3>
+            <p>リアルタイムメタバースの開発、物体検出を用いた駐輪場管理システム、人流可視化システム</p>                       
         </div>
     </div>
-    <div class="start">
-    </div>        
-
 </body>
 <script>
     $(function() {
@@ -101,9 +84,10 @@
         });
     });
 
-    $('.main').on('click', function () {
-        $(".main").toggleClass("main2");
+    $('.main_labo').on('click', function () {
+        $(".main_labo").toggleClass("main2_labo");
     });
+    
     //スタート
     $(function() {
 	setTimeout(function(){

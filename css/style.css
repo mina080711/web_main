@@ -13,6 +13,20 @@
       background-position: center;
       background-attachment: fixed;
 }
+.main_labo{
+    background: linear-gradient(rgba(251, 0, 255, 0.68), rgba(1, 0, 22, 0.88)),
+    url('../imgs/back02.jpeg'), center;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+}
+.main2_labo{
+    background: linear-gradient(rgba(0, 221, 255, 0.872), rgba(1, 0, 22, 0.88)),
+    url('../imgs/back02.jpeg'), center;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+}
 .main_all{
     display: flex;
     margin: 5% 5% 20% 5%;
@@ -44,7 +58,13 @@
     padding-bottom: 12px;
     line-height: 3;
   }
-  
+  /*各ページ設定*/
+  .page{
+    color: #fff;
+    margin: 10% auto;
+    width:90%;
+    background-color: rgba(255, 255, 255, 0.202);
+  }
 /* プログラミング */
 .main01{
     text-align: left;
@@ -179,3 +199,5 @@
     transform: translatey(0);
     }
 }
+
+/*基礎設定*/
