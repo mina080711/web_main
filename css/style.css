@@ -183,12 +183,14 @@
   }
 
   }
-  /*スクロールアニメーション*/
+  /*スクロールアニメーション
   .main_all{
     animation-delay: 1.8s;
     animation-name: fadein;
     animation-duration: 3s;
-}
+}  
+  */
+
 @keyframes fadein{
     from{
     opacity: 0;
